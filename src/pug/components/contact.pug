@@ -1,0 +1,36 @@
+
+
+//Contact
+
+
+section.contact
+	.container
+		.contact__body
+			h2.contact__title.title.title--b contact
+			p.contact__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+		.contact__form-content
+			form(action="#" method="post").contact-form
+				.contact-form__content
+					.contact-form__item
+						input(type="text" name="username" placeholder="Name").contact-form__input
+					.contact-form__item
+						input(type="email" name="email" placeholder="Email").contact-form__input
+					.contact-form__item
+						input(type="text" name="phone" placeholder="Phone").contact-form__input
+				.contact-form__item-message
+					textarea(name="text", placeholder="Message").contact-form__input-message
+				.contact-form__row
+					.contact-form__body
+						.contact-form__adress
+							img(src="./assets/imgs/contact/01.svg" alt="icon map").contact-form__icon
+							a(href="#").contact-form__map 5th London Boulevard, U.K.
+						.contact-form__phone
+							img(src="./assets/imgs/contact/02.svg" alt="icon phone").contact-form__icon
+							a(href="#").contact-form__tel +40 729 131 637/+40 726 458 782
+						.contact-form__email
+							img(src="./assets/imgs/contact/03.svg" alt="icon mail").contact-form__icon
+							a(href="#").contact-form__mail office@mindblister.com
+					.contact-form__button
+						button(type="submit").contact-form__btn SEND MESSAGE
+.map(id="map")
+.copyright © Copyright <span class="copyright__bold">Mindblister</span>  2019

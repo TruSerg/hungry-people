@@ -1,0 +1,305 @@
+@import "../utils/parameters";
+
+//Contact
+
+.contact {
+	padding: 100px 0px;
+	&__body {
+		max-width: 565px;
+		margin: 0px auto;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		left: 0;
+		margin: 0px 0px 35px 0px;
+
+		&::after {
+			bottom: -1.5rem;
+		}
+	}
+
+	&__text {
+		font-weight: 700;
+		font-size: 1.8rem;
+		line-height: 156%;
+		color: $c-text;
+	}
+
+	&__form-content {
+		margin: 0px -5px;
+	}
+}
+
+.contact-form {
+	&__content {
+		display: flex;
+	}
+
+	&__item {
+		padding: 0px 5px;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 33.33333%;
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__input {
+		background-color: #e5e5e5;
+		min-height: 60px;
+		border-radius: 5px;
+		padding: 0px 22px;
+	}
+
+	&__item-message {
+		padding: 0px 5px;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 100%;
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__input-message {
+		min-height: 120px;
+		background-color: #e5e5e5;
+		border-radius: 5px;
+		padding: 0px 20px;
+		font-weight: 400;
+		font-size: 1.4rem;
+		font-family: " Open Sans";
+		padding: 20px 22px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__body {
+		flex: 1 1 50%;
+		display: flex;
+		padding: 0px 5px;
+	}
+
+	&__adress {
+		display: flex;
+		align-items: center;
+	}
+
+	&__map {
+		display: inline-block;
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: rgba(51, 51, 51, 0.5);
+		margin: 0px 0px 0px 9px;
+		padding: 10px 0px;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $c-secondary;
+		}
+	}
+
+	&__phone {
+		display: flex;
+		align-items: center;
+		margin: 0px 0px 0px 14px;
+	}
+
+	&__tel {
+		display: inline-block;
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: rgba(51, 51, 51, 0.5);
+		margin: 0px 0px 0px 10px;
+		padding: 10px 0px;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $c-secondary;
+		}
+	}
+
+	&__email {
+		display: flex;
+		align-items: center;
+		margin: 0px 0px 0px 16px;
+	}
+
+	&__mail {
+		display: inline-block;
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: rgba(51, 51, 51, 0.5);
+		margin: 0px 0px 0px 9px;
+		padding: 10px 0px;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $c-secondary;
+		}
+	}
+
+	&__button {
+		padding: 0px 5px;
+		flex: 1 1 50%;
+		text-align: center;
+		max-width: 50%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__btn {
+		min-height: 60px;
+		background-color: $c-secondary;
+		border-radius: 5px;
+		padding: 0px 30px;
+		font-weight: 700;
+		font-size: 1.2rem;
+		line-height: 167%;
+		color: $c-primary;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: $c-text;
+			background-color: transparent;
+			border: 1.5px solid $c-secondary;
+		}
+	}
+}
+
+.map {
+	display: flex;
+	min-height: 475px;
+	flex: 1 1 auto;
+	max-width: 100%;
+}
+
+.copyright {
+	min-height: 100px;
+	flex: 1 1 auto;
+	max-width: 100%;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.9);
+
+	&__bold {
+		font-weight: 700;
+		padding: 0px 10px 0px 5px;
+	}
+}
+
+//Media
+
+@media (max-width: $xl) {
+	.contact-form {
+		&__body {
+			display: block;
+		}
+
+		&__phone {
+			margin: 0;
+		}
+
+		&__email {
+			margin: 0;
+		}
+
+		&__button {
+			align-self: start;
+		}
+	}
+}
+
+@media (max-width: $md) {
+	.contact-form {
+		&__body {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media (max-width: $sm) {
+	.contact {
+		padding: 50px 0px;
+
+		&__body {
+			max-width: 100%;
+		}
+	}
+
+	.contact-form {
+		&__content {
+			display: block;
+		}
+
+		&__row {
+			flex-wrap: wrap;
+		}
+
+		&__body {
+			order: 2;
+			max-width: 100%;
+			flex: 1 1 100%;
+		}
+
+		&__button {
+			order: 1;
+			max-width: 100%;
+			flex: 1 1 100%;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+}
+
+@media (max-width: $xs) {
+	.contact {
+		padding: 20px 0px;
+
+		&__body {
+			margin: 0px 0px 20px 0px;
+		}
+
+		&__title {
+			font-size: 3.2rem;
+		}
+
+		&__text {
+			font-size: 1.7rem;
+		}
+	}
+
+	.contact-form {
+		&__content {
+			display: block;
+		}
+
+		&__row {
+			flex-wrap: wrap;
+		}
+
+		&__body {
+			order: 2;
+			max-width: 100%;
+			flex: 1 1 100%;
+		}
+
+		&__btn {
+			min-height: 40px;
+		}
+
+		&__input {
+			min-height: 40px;
+		}
+	}
+
+	.copyright {
+		min-height: 60px;
+	}
+}

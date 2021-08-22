@@ -1,0 +1,188 @@
+@import "../utils/parameters";
+//Menu
+
+.menu {
+	padding: 100px 0px 69px 0px;
+	&__body {
+		text-align: center;
+		max-width: 565px;
+		margin: 0px auto;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		left: 0;
+		margin: 0px 0px 37px 0px;
+
+		&::after {
+			bottom: -1.5rem;
+		}
+	}
+
+	&__text {
+		font-weight: 700;
+		font-size: 1.8rem;
+		line-height: 156%;
+		color: $c-text;
+		margin: 0px 0px 50px 0px;
+	}
+
+	&__range {
+		margin: 0px 0px 51px 0px;
+		text-align: center;
+	}
+
+	&__range-content {
+		display: inline-block;
+		padding: 17px 20px;
+		min-width: 120px;
+		font-weight: 700;
+		font-size: 1.2rem;
+		color: $c-text2;
+		border-right: 1px solid rgba(51, 51, 51, 0.2);
+		transition: color 0.3s ease;
+		&:last-child {
+			border: none;
+		}
+
+		&:hover {
+			color: #e8c300;
+		}
+	}
+
+	&__row {
+		margin: 0px -20px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		padding: 0px 20px;
+	}
+
+	&__item {
+		margin: 0px 0px 34px 0px;
+	}
+
+	&__name {
+		font-family: "Banny";
+		font-size: 1.8rem;
+		line-height: 100%;
+		color: $c-text2;
+		transition: color 0.3s ease;
+		&:hover {
+			color: #e8c300;
+		}
+	}
+
+	&__price {
+		margin: 0px 0px 0px 15px;
+		font-family: "Banny";
+		font-size: 1.8rem;
+		line-height: 100%;
+		color: $c-text2;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: #e8c300;
+		}
+	}
+
+	&__description {
+		font-size: 1.2rem;
+		font-weight: 400;
+		color: rgb(155, 151, 151);
+	}
+}
+
+//Media
+
+@media (max-width: $lg) {
+	.menu {
+		&__row {
+			justify-content: flex-start;
+		}
+	}
+}
+
+@media (max-width: $md) {
+	.menu {
+		&__name {
+			font-size: 1.7rem;
+		}
+
+		&__price {
+			font-size: 1.7rem;
+		}
+
+		&__range-content {
+			min-width: 100px;
+		}
+	}
+}
+
+@media (max-width: $sm) {
+	.menu {
+		padding: 30px 0px 0px 0px;
+		&__body {
+			text-align: center;
+			max-width: 100%;
+		}
+
+		&__range-content {
+			min-width: 70px;
+		}
+	}
+}
+
+@media (max-width: $xs) {
+	.menu {
+		padding: 20px 0px 20px 0px;
+		&__range {
+			display: flex;
+			flex-direction: column;
+			margin: 0px 0px 20px 0px;
+		}
+
+		&__body {
+			margin: 0px 0px 20px 0px;
+		}
+
+		&__range-content {
+			padding: 10px 20px;
+			border-right: none;
+			border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+		}
+
+		&__text {
+			font-size: 1.7rem;
+			margin: 0;
+		}
+
+		&__item {
+			margin: 0px 0px 15px 0px;
+		}
+
+		&__name {
+			font-size: 1.5rem;
+		}
+
+		&__price {
+			font-size: 1.5rem;
+			margin: 0px 0px 0px 4px;
+		}
+
+		&__row {
+			margin: 0;
+		}
+
+		&__column {
+			padding: 0;
+		}
+
+		&__title {
+			font-size: 3.2rem;
+		}
+	}
+}

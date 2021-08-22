@@ -1,0 +1,282 @@
+// для каждого компонента нужно импортить переменные, чтобы их использовать
+@import "../utils/parameters";
+
+//Header
+
+.header {
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	left: 0;
+	padding: 30px 0px 0px 0px;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__menu {
+		max-width: 100%;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		margin: 0px 0px 80px 0px;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 10px;
+		font-weight: bold;
+		font-size: 1.2rem;
+		line-height: 150%;
+		color: $c-primary;
+		&:hover {
+			color: #ffd600;
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&__logo {
+		display: inline-block;
+		width: 150px;
+		margin: 0px 15px;
+	}
+
+	&__image {
+		max-width: 100%;
+	}
+
+	&__menu--left {
+		padding: 5px 35px 0px 36px;
+		li {
+			margin: 0px 0px 0px 73px;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+	}
+
+	&__menu--right {
+		padding: 5px 30px 0px 50px;
+		li {
+			margin: 0px 0px 0px 64px;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.header-body {
+	display: none;
+
+	&__logo {
+		position: relative;
+		display: inline-block;
+		width: 80px;
+		z-index: 5;
+	}
+
+	&__image {
+		max-width: 100%;
+	}
+}
+
+.menu-header {
+	&__icon {
+		display: none;
+		position: absolute;
+		top: 23px;
+		right: 25px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+
+		span {
+			transition: all 0.3s ease;
+			top: 8px;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #ffd600;
+
+			&:first-child {
+				top: 0px;
+			}
+
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+
+		&.active {
+			span {
+				&:first-child {
+					top: 8px;
+					transform: rotate(-45deg);
+				}
+
+				&:last-child {
+					bottom: 8px;
+					transform: rotate(45deg);
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&__link {
+		font-weight: bold;
+		font-size: 1.2rem;
+		line-height: 150%;
+		color: $c-primary;
+	}
+}
+
+//Media
+
+@media (max-width: $xl) {
+	.header {
+		&__menu--left {
+			padding: 16px 30px 0px 30px;
+			li {
+				margin: 0px 0px 0px 55px;
+			}
+		}
+
+		&__menu--right {
+			padding: 16px 30px 0px 30px;
+			li {
+				margin: 0px 0px 0px 50px;
+			}
+		}
+
+		&__logo {
+			width: 120px;
+		}
+
+		&__menu {
+			margin: 0px 0px 50px 0px;
+		}
+	}
+}
+
+@media (max-width: $lg) {
+	.header {
+		&__menu--left {
+			padding: 16px 15px 0px 15px;
+			li {
+				margin: 0px 0px 0px 45px;
+			}
+		}
+
+		&__menu--right {
+			padding: 16px 15px 0px 15px;
+			li {
+				margin: 0px 0px 0px 40px;
+			}
+		}
+
+		&__logo {
+			width: 90px;
+		}
+
+		&__menu {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+}
+
+@media (max-width: $md) {
+	.header {
+		&__menu--left {
+			padding: 16px 5px 0px 5px;
+			li {
+				margin: 0px 0px 0px 15px;
+			}
+		}
+
+		&__menu--right {
+			padding: 16px 5px 0px 5px;
+			li {
+				margin: 0px 0px 0px 10px;
+			}
+		}
+
+		&__menu {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+}
+
+@media (max-width: $sm) {
+	.header {
+		padding: 20px 0px 0px 0px;
+		&__row {
+			display: none;
+		}
+
+		&__logo {
+			margin: 0;
+			position: relative;
+			display: inline-block;
+			width: 80px;
+			z-index: 5;
+		}
+
+		.header-body {
+			display: block;
+			.menu-header {
+				&__icon {
+					display: block;
+				}
+
+				&__menu {
+					overflow: auto;
+					position: absolute;
+					width: 100%;
+					height: 550px;
+					top: 0;
+					left: -110%;
+					background: url("../imgs/intro/01.jpg") center/cover no-repeat;
+					z-index: 2;
+					padding: 140px 0px 0px 0px;
+					transition: all 0.3s ease;
+
+					&.active {
+						left: 0;
+					}
+				}
+
+				&__list {
+					display: block;
+
+					li {
+						margin: 0px 0px 30px 0px;
+						padding: 0px 0px 0px 15px;
+					}
+				}
+
+				&__link {
+					margin: 0;
+
+					&:hover {
+						&:after {
+							width: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

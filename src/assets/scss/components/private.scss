@@ -1,0 +1,362 @@
+@import "../utils/parameters";
+//Private
+
+.private {
+	overflow: hidden;
+	min-height: 675px;
+	background: url("../imgs/private/bg.jpg") center/cover no-repeat;
+
+	&__label {
+		position: relative;
+		padding: 45px 0px 0px 0px;
+		font-weight: 700;
+		font-size: 1.2rem;
+		line-height: 117%;
+		text-align: center;
+		letter-spacing: 0.5em;
+		text-transform: uppercase;
+		color: $c-primary;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 50%;
+			top: 0;
+			width: 1px;
+			height: 700px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	&__row {
+		padding: 41px 0px 43px 0px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__content {
+		padding: 0px 20px 0px 122px;
+		position: relative;
+		width: 50%;
+		display: flex;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 33%;
+			bottom: -70%;
+			width: 1px;
+			height: 1000px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	&__images {
+		display: inline-block;
+		position: relative;
+	}
+
+	&__image {
+		border-radius: 5px;
+		box-shadow: 0px 0px 50px $c-text;
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	&__img {
+		position: absolute;
+		left: -26%;
+		bottom: 24%;
+		max-width: 15vw;
+		box-shadow: 0px 0px 100px $c-text;
+		animation: private 3s ease infinite;
+	}
+
+	@keyframes private {
+		0% {
+			transform: rotateY(0);
+		}
+
+		50% {
+			transform: rotateY(180deg);
+		}
+
+		100% {
+			transform: rotateY(-180deg);
+		}
+	}
+
+	&__text {
+		padding: 0px 0px 0px 20px;
+		position: absolute;
+		right: -42%;
+		bottom: 197px;
+		z-index: 1;
+		background-color: $c-text;
+		border-radius: 5px 5px 0 0;
+		display: flex;
+		align-items: center;
+		min-height: 81px;
+		min-width: 475px;
+		font-family: "Banny";
+		font-size: 2.4rem;
+		text-transform: uppercase;
+		color: $c-primary;
+		transform: rotate(90deg);
+	}
+
+	&__content-rev {
+		padding: 0px 125px 0px 20px;
+		justify-content: flex-end;
+		position: relative;
+		width: 50%;
+		display: flex;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 34%;
+			top: -70%;
+			width: 1px;
+			height: 1000px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	&__text-rev {
+		padding: 0px 0px 0px 20px;
+		position: absolute;
+		left: -42%;
+		bottom: 197px;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		border-radius: 5px 5px 0 0;
+		background-color: $c-text;
+		font-family: "Banny";
+		font-size: 2.4rem;
+		text-transform: uppercase;
+		color: $c-primary;
+		min-height: 81px;
+		min-width: 475px;
+		transform: rotate(-90deg);
+	}
+
+	&__images-rev {
+		display: inline-block;
+		position: relative;
+	}
+
+	&__image-rev {
+		border-radius: 5px;
+		box-shadow: 0px 0px 50px $c-text;
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	&__img-rev {
+		position: absolute;
+		right: -26%;
+		bottom: 23%;
+		max-width: 15vw;
+		box-shadow: 0px 0px 100px $c-text;
+
+		animation: private-rev 3s ease infinite;
+	}
+
+	@keyframes private-rev {
+		0% {
+			transform: rotateY(0);
+		}
+
+		50% {
+			transform: rotateY(-180deg);
+		}
+
+		100% {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&__connect {
+		font-weight: 400;
+		font-size: 1.2rem;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.5);
+		padding: 0px 0px 20px 0px;
+	}
+
+	&__tel {
+		font-weight: 700;
+		color: #ffffff80;
+	}
+}
+
+//Media
+
+@media (max-width: $xl) {
+	.private {
+		&__row {
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&__label {
+			&::before {
+				position: static;
+			}
+		}
+
+		&__content {
+			padding: 0;
+			margin: 0px 0px 50px 0px;
+
+			&::before {
+				width: 0;
+				height: 0;
+			}
+		}
+
+		&__content-rev {
+			padding: 0;
+
+			&::before {
+				width: 0;
+				height: 0;
+			}
+		}
+
+		&__img-rev {
+			position: absolute;
+			right: -28%;
+			bottom: 24%;
+			max-width: 25vw;
+			box-shadow: 0px 0px 100px $c-text;
+		}
+
+		&__img {
+			position: absolute;
+			left: -28%;
+			bottom: 24%;
+			max-width: 25vw;
+			box-shadow: 0px 0px 100px $c-text;
+		}
+	}
+}
+
+@media (max-width: $md) {
+	.private {
+		&__img-rev {
+			position: absolute;
+			right: 20%;
+			bottom: -25%;
+			max-width: 100%;
+			box-shadow: 0px 0px 100px $c-text;
+		}
+
+		&__img {
+			position: absolute;
+			left: 20%;
+			top: -25%;
+			max-width: 100%;
+			box-shadow: 0px 0px 100px $c-text;
+		}
+
+		@keyframes private {
+			0% {
+				transform: rotateX(0);
+			}
+
+			50% {
+				transform: rotateX(180deg);
+			}
+
+			100% {
+				transform: rotateX(-180deg);
+			}
+		}
+
+		@keyframes private-rev {
+			0% {
+				transform: rotateX(0);
+			}
+	
+			50% {
+				transform: rotateX(-180deg);
+			}
+	
+			100% {
+				transform: rotateX(180deg);
+			}
+		}
+
+
+
+		&__content {
+			width: 100%;
+		}
+
+		&__content-rev {
+			width: 100%;
+		}
+
+		&__row {
+			padding: 150px 0px;
+		}
+	}
+}
+
+@media (max-width: $xs) {
+	.private {
+		&__text {
+			padding: 0px 20px 0px 20px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			justify-content: flex-end;
+			border-radius: 5px 0 0 0;
+			min-height: 40px;
+			min-width: 240px;
+			font-family: "Banny";
+			font-size: 2rem;
+			transform: rotate(0deg);
+		}
+
+		&__text-rev {
+			padding: 0px 20px 0px 20px;
+			left: 0;
+			bottom: 0;
+			border-radius: 0 5px 0 0;
+			font-size: 2rem;
+			min-height: 40px;
+			min-width: 210px;
+			transform: rotate(0deg);
+		}
+
+		&__row {
+			padding: 160px 0px 40px 0px;
+		}
+
+		&__content {
+			margin: 0px 0px 170px 0px;
+		}
+
+		&__img-rev {
+			position: absolute;
+			right: 22%;
+			top: -28%;
+			max-width: 50vw;
+			animation: none;
+		}
+
+		&__img {
+			position: absolute;
+			left: 23%;
+			top: -28%;
+			max-width: 50vw;
+			animation: none;
+		}
+	}
+}

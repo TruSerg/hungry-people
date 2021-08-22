@@ -1,0 +1,38 @@
+@import "utils/parameters";
+
+//Gallery
+
+.gallery {
+	&__body {
+		max-width: 1470px;
+		margin: 0px auto;
+		padding: 0px 15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__img {
+		flex: 1 1 25%;
+		max-width: 25%;
+		display: block;
+		height: auto;
+	}
+}
+
+//Media
+
+@media (max-width: $md) {
+	.gallery {
+		&__img {
+			max-width: 50%;
+		}
+	}
+}
+
+@media (max-width: $xs) {
+	.gallery {
+		&__img {
+			max-width: 100%;
+		}
+	}
+}
