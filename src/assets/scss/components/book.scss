@@ -93,6 +93,14 @@
 		line-height: 167%;
 		background: $c-secondary;
 		border-radius: 5px;
+		transition: all 0.3s ease;
+
+
+		&:hover {
+			color: $c-text;
+			background-color: transparent;
+			border: 1.5px solid $c-secondary;
+		}
 	}
 
 	&__images-column {
