@@ -189,8 +189,15 @@
 	}
 
 	&__tel {
+		display: inline-block;
 		font-weight: 700;
 		color: #ffffff80;
+		padding: 10px 0px;
+		transition: color 0.3s ease;
+
+		&:hover{
+			color: $c-secondary;
+		}
 	}
 }
 

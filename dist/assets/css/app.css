@@ -991,11 +991,11 @@ button {
       font-size: 3.2rem; } }
 
 .book {
-  padding: 98px 0px 40px 0px; }
+  padding: 98px 0px 28px 0px; }
   .book__row {
     display: flex;
     align-items: center;
-    margin: 0px 0px 42px 0px; }
+    margin: 0px 0px 34px 0px; }
   .book__column {
     width: 50%; }
   .book__content {
@@ -1089,6 +1089,16 @@ button {
     font-size: 1.2rem;
     line-height: 100%;
     color: rgba(51, 51, 51, 0.5); }
+  .book__timetable-link {
+    display: inline-block;
+    padding: 10px 0px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 100%;
+    color: rgba(51, 51, 51, 0.5);
+    transition: color 0.3s ease; }
+    .book__timetable-link:hover {
+      color: #e8c300; }
 
 @media (max-width: 1300px) {
   .book__images-column {
@@ -1582,8 +1592,13 @@ button {
     color: rgba(255, 255, 255, 0.5);
     padding: 0px 0px 20px 0px; }
   .private__tel {
+    display: inline-block;
     font-weight: 700;
-    color: #ffffff80; }
+    color: #ffffff80;
+    padding: 10px 0px;
+    transition: color 0.3s ease; }
+    .private__tel:hover {
+      color: #e8c300; }
 
 @media (max-width: 1300px) {
   .private__row {
@@ -1790,13 +1805,14 @@ button {
   display: flex;
   align-items: center;
   margin: 0px 0px 0px 14px; }
+  .contact-form__phone :nth-child(2) {
+    margin: 0px 0px 0px 10px; }
 
 .contact-form__tel {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 700;
   color: rgba(51, 51, 51, 0.5);
-  margin: 0px 0px 0px 10px;
   padding: 10px 0px;
   transition: color 0.3s ease; }
   .contact-form__tel:hover {
@@ -1817,6 +1833,10 @@ button {
   transition: color 0.3s ease; }
   .contact-form__mail:hover {
     color: #e8c300; }
+
+.contact-form__icon {
+  position: relative;
+  bottom: 2px; }
 
 .contact-form__button {
   padding: 0px 5px;
