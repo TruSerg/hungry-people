@@ -705,6 +705,7 @@ button {
     z-index: 1;
     max-width: 15vw;
     box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
     animation: rotate 3s ease infinite; }
 
 @keyframes rotate {
@@ -879,6 +880,7 @@ button {
     z-index: 1;
     max-width: 15vw;
     box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
     animation: rotate 3s ease infinite; }
   .team__content {
     text-align: center;
@@ -1082,6 +1084,7 @@ button {
     z-index: 1;
     max-width: 15vw;
     box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
     animation: rotate 3s ease infinite; }
   .book__timetable {
     text-align: center;
@@ -1223,6 +1226,7 @@ button {
     z-index: 1;
     max-width: 15vw;
     box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
     animation: rotate 3s ease infinite; }
   .special__content {
     text-align: center;
@@ -1504,6 +1508,7 @@ button {
     bottom: 24%;
     max-width: 15vw;
     box-shadow: 0px 0px 100px #000;
+    border-radius: 5px;
     animation: private 3s ease infinite; }
 
 @keyframes private {
@@ -1576,6 +1581,7 @@ button {
     bottom: 23%;
     max-width: 15vw;
     box-shadow: 0px 0px 100px #000;
+    border-radius: 5px;
     animation: private-rev 3s ease infinite; }
 
 @keyframes private-rev {
