@@ -245,6 +245,15 @@
 	.contact-form {
 		&__content {
 			display: block;
+			max-width: 450px;
+		}
+
+		&__item-message {
+			max-width: 450px;
+		}
+
+		&__btn {
+			max-width: 440px;
 		}
 
 		&__row {

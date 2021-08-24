@@ -1909,7 +1909,12 @@ button {
     .contact__body {
       max-width: 100%; }
   .contact-form__content {
-    display: block; }
+    display: block;
+    max-width: 450px; }
+  .contact-form__item-message {
+    max-width: 450px; }
+  .contact-form__btn {
+    max-width: 440px; }
   .contact-form__row {
     flex-wrap: wrap; }
   .contact-form__body {
